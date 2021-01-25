@@ -1,0 +1,80 @@
+
+Testen met Jest
+Leerdoelen
+ [X] Je kan uitleggen wat een automated test is
+            Een programma waarmee je kan testen of je code doet wat je verwacht.
+ [X] Je kan de voor- en nadelen van automated tests / handmatig testen uitleggen
+            Mensen handmatig testen:
+                + mensen zijn slim en flexibel
+                + mensen kunnen feedback geven over de gebruikservaring
+                - duur, want mensen zijn duur
+                - testen kan saai werk zijn
+                - het handmatig testen neemt veel tijd in beslag.
+            Automatisch testen
+                - computers zijn dom, ze doen alleen wat je zegt.
+                - kunnen alleen zien of het werkt en niet of het er mooi uitziet.
+                - duur, want developers moeten de test schrijven.
+                + goedkoop, computer voert ze uit dus na het maken goedkoper
+                + snel (milliseconden, seconden om te testen)
+                + snel & goedkoop betekent dat je vaak kan testen (als je saved bijvoorbeeld)
+            Samenvatting
+                Automatisch testen schrijven is een investering in de toekomst. In het begin kost het tijd, maar daarna levert het veel op.
+                Het komt de stabiliteit op de lange termijn ten goede, omdat het gelijk test of het werkt.
+                Handmatig testen wordt hierdoor niet overbodig, want de UX (user experience kun je niet automatisch testen)
+            Extra voordelen van automatisch testen
+                Als je code goed test kom je er snel achter wanneer je iets per ongeluk stukmaakt.
+                Op die manier komt het minder vaak voor dat iets "niet meer werkt" (je voorkomt regressie)
+                Heel handig om oefeningen mee te maken / doen wanneer je nog leert te programmeren
+ [X] Je weet dat Jest een JavaScript test framework is
+            Jest is een framework voor javascript die code kan testen, gemaakt door developers door bibliotheken samentevoegen.
+            voordeel: andere developers hebben al allerlei testen voor ons geschreven.
+            Jest heeft:
+            - functies die je code runnen.
+            - functies waarmee je kan checken of je code doet wat je wilt dat je code doet.
+            - ingebouwde commandos om je testen uit te voeren (vanuit de terminal).
+            - maakt rapportjes met welke testen gelukt zijn en welke niet.
+            - en natuurlijk nog veel meer.
+ [X] Je weet waar je de documentatie van Jest kan vinden
+            https://jestjs.io/docs/en/getting-started
+ [ ] Je weet hoe je met behulp van Jest automated tests kan opzetten
+            1: typ in de terminal: npm init
+            2: beantwoord de vragen
+            3: bij is this ok controleer je of alle invoervelden kloppen. Zo ja typ yes.
+               Er wordt een package.json file aangemaakt.
+            4: Voeg jest toe aan je project door in de terminal te typen: npm install -D jest
+               Alle informatie wordt toegevoegd aan je package.json file.
+               ( "devDevendencies": {"jest": "^^26.6.3"}     DIT geeft aan dat dit project afhankelijk is van een framework namelijk jest.
+               Er is nu ook een map node_modules aangemaakt met alle libraries van JEST er in.
+            5: Maak een repository aan
+                - git init
+                - Maak een nieuwe file aan .gitignore en voeg node_modules toe. Want die wil je niet meenemen in het bijhouden.
+
+ [ ] Je kan in een test 3 delen onderscheiden
+    [ ] Arrange (klaarzetten)
+    [ ] Act (handelen)
+    [ ] Assert (beweringen)
+ [ ] Je weet hoe je de Jest expect functie kan gebruiken
+ [ ] Je weet hoe je je code los kan koppelen van het test bestand
+ [ ] Je weet het verschil tussen Unit, Integration en End to End tests
+
+
+Verwerkings Opdracht voor Jest
+Maak een programmeer oefening voor een ander!
+ [ ]  Bedenk zelf een functie en schrijf die in index.js
+ [ ]  Exporteer hem uit index.js en importeer hem in index.test.js
+ [ ]  Voeg jest test(s) toe in index.test.js die de functie test
+ [ ]  Maak een commit
+ [ ]  Voeg een git repo toe aan je project
+ [ ]  Push je main branch
+ [ ]  Switch naar een branch "solutions"
+ [ ]  Push je solutions branch
+ [ ]  Switch naar de main branch
+ [ ]  Verwijder je oplossing (zodat iemand je test kan oplossen)
+ [ ]  Push nogmaals naar de main branch
+
+Wil je een oefening maken?
+ [ ] 1 Clone de repo
+ [ ] 2 cd <reponaam>
+ [ ] 3 run npm install
+ [ ] 4 run npx jest --watch om de testen te starten
+ [ ] 5 los de oefening op!
