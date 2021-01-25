@@ -36,7 +36,7 @@ Leerdoelen
             - en natuurlijk nog veel meer.
  [X] Je weet waar je de documentatie van Jest kan vinden
             https://jestjs.io/docs/en/getting-started
- [ ] Je weet hoe je met behulp van Jest automated tests kan opzetten
+ [X] Je weet hoe je met behulp van Jest automated tests kan opzetten
             1: typ in de terminal: npm init
             2: beantwoord de vragen
             3: bij is this ok controleer je of alle invoervelden kloppen. Zo ja typ yes.
@@ -48,6 +48,39 @@ Leerdoelen
             5: Maak een repository aan
                 - git init
                 - Maak een nieuwe file aan .gitignore en voeg node_modules toe. Want die wil je niet meenemen in het bijhouden.
+                - git add .
+                - git commit -m "install jest"
+            6: Maak een js-bestandje aan en noem deze index.test.js of index.spec.js of zet ze in een map genaamd __tests__
+            7: Schrijf je test:
+                - in jest zit een functie om je code te testen en die heet test. typ test
+                - test verwacht 2 argumenten: test ("beschrijving", function(){})
+                        OF
+                            test("beschrijving", () => {})
+            8: test of het werkt door console log toe te voegen:
+                test("even kijken of dit werkt", () => {
+                console.log("Hallo")
+                })
+                typ in de terminal om te testen: npx jest
+            9: je kunt jest ook instellen dat hij bij elke save (wijziging) de code test, zoals nodemon
+                typ hiervoor in de terminal: npx jest --watch
+            10: je kunt bij package.json aangeven wat de testcode hiervan was onder parent scripts en child test.
+                er staat nu:                echo "Error: no test specified" && exit 1.
+                dit vervang je dan voor:    npx jest
+                je kunt ook daaronder nog test.watch toevoegen door:
+                        "test:watch": "npx jest --watch"
+                je collega kan nu zien hoe jij getest hebt en hoe hij kan testen. door bijvoorbeeld: npm run test:watch
+
+                De stappen aan het eind van de les:
+                1.  npm init
+                2.  npm install -D jest
+                3.  (optioneel) git init -> node_modules in een .gitignore
+                4.  Maak een bestandje met .test.js als extensie
+                5.  Dan schrijf je een test functie (voorbeeld)
+                6.  npx jest om de testen te runnen
+                7.  (optioneel) Voeg scripts toe aan je package.json
+                8.  npx jest --watch -> runnen de testen bij een verandering
+                9.  CTRL + C om de testen te stoppen in de terminal
+            13: even committen (git add .   ;   git commit -m "opzetten jest-project"
 
  [ ] Je kan in een test 3 delen onderscheiden
     [ ] Arrange (klaarzetten)

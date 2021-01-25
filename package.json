@@ -4,7 +4,8 @@
   "description": "Info en oefenen met JEST",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "test:watch": "npx jest --watch"
   },
   "keywords": [
     "Jest",
