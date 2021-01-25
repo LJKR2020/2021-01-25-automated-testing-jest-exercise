@@ -122,8 +122,17 @@ Leerdoelen
                 Maak de console.logs in tekstvariant
                 en commit je werk.
 
- [ ] Je weet hoe je de Jest expect functie kan gebruiken
+ [X] Je weet hoe je de Jest expect functie kan gebruiken
+            Hiervoor pakken we een ander voorbeeld:
+            - Je zet de test met beschrijving klaar
+            - je vult je benodigde gegevens in bij arrange
+            - je vult de handeling in die de test moet uitvoeren in act
+            - je vult je verwachting inbij assert.
+            Bij test 2 maken we gebruik van het opsporen van een object in dit geval de user.
+            De expect is hierdoor niet expect().toBe() maar expect().toEqual({})
  [ ] Je weet hoe je je code los kan koppelen van het test bestand
+            Je code kan weigeren op te starten als je dit in jest laat staan. zo doet node.js het niet.
+
  [ ] Je weet het verschil tussen Unit, Integration en End to End tests
 
 
