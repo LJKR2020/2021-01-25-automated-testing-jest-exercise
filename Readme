@@ -82,10 +82,46 @@ Leerdoelen
                 9.  CTRL + C om de testen te stoppen in de terminal
             13: even committen (git add .   ;   git commit -m "opzetten jest-project"
 
- [ ] Je kan in een test 3 delen onderscheiden
-    [ ] Arrange (klaarzetten)
-    [ ] Act (handelen)
-    [ ] Assert (beweringen)
+ De test schrijven met de volgende drie onderdelen:
+ [X] Je kan in een test 3 delen onderscheiden
+    [X] Arrange (klaarzetten)
+    [X] Act (handelen)
+    [X] Assert (beweringen)
+
+            1. Voeg de drie onderdelen toe in je test document met // ervoor. (rein doet all CAPS)
+            2. bedenk een testbeschrijving: bijvoorbeeld "add function should return the sum of 2 numbers"
+            3. Voor de test uit stap 2 moeten wij de 2 nummers klaarzetten. Dit doen wij in het ARRANGE gebied met const
+            4. nu gaan wij handelen in het ACT gebied. voor het huidige voorbeeld doen we const sum = add(number 1, number 2)
+            5. Nu vullen we nog assert in met onze verwachting. Dit doen wij met expect(sum).toBe(9)
+        expect en toBe komen uit jest!
+            6. Nu kijkt Rein of de test al slaagt. Deze slaagt niet.
+        jest laat weten dat er een referenceError is. add is not defined. De functie bestaat nog niet.
+        (door eerst de test te doen krijg je een testdrivendevelopment, het kan ook andersom)
+            7. Schrijf de functie (boven test):
+                function add(){
+                }
+            Er is nog steeds een error (geen refference error). Nu krijgen we undefined, omdat de functie wel bestaat, maar nog niks doet.
+                function add(number1, number2) {
+                    console.log("INPUT", number1, number2);
+                }
+            Nu faalt de test nog steeds, maar we zien wel dat de nummers doorkomen
+                function add(number1, number2) {
+                    console.log("INPUT", number1, number2);
+                    const sum = number1 + number2;
+                    console.log("SUM", sum);
+                }
+            Nu faalt de test nog steeds, want de uitkomst wordt nog niet return gedaan.
+                function add(number1, number2) {
+                    console.log("INPUT", number1, number2);
+                    const sum = number1 + number2;
+                    console.log("SUM", sum);
+                    return sum
+                    }
+        De uitkomst van de console.logs staan onder de test en boven het resultaat van de test.
+            8. Zet de automatische testing uit als je deze aan had staan.
+                Maak de console.logs in tekstvariant
+                en commit je werk.
+
  [ ] Je weet hoe je de Jest expect functie kan gebruiken
  [ ] Je weet hoe je je code los kan koppelen van het test bestand
  [ ] Je weet het verschil tussen Unit, Integration en End to End tests
